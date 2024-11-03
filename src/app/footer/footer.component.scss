@@ -1,0 +1,87 @@
+@use 'kit.scss' as *;
+
+footer {
+    display: flex;
+    justify-content: center;
+
+    .content {
+        padding: 32px;
+        background-color: $bg-dark-color;
+        border-radius: 8px 8px 0 0;
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1279px) {
+            padding: 32px 24px;
+        }
+
+        @media screen and (max-width: 1279px) {
+            padding: 16px;
+        }
+
+        .copyright {
+
+            img {
+                width: 100px;
+                height: 60px;
+                margin-bottom: 16px;
+
+                @media screen and (max-width: 1279px) {
+                    width: 90px;
+                    height: 54px;
+                    margin-bottom: 8px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    width: 55px;
+                    height: 39px;
+                    margin-bottom: 8px;
+                }
+            }
+
+            p {
+                color:$text-color;
+                margin: 0;
+                font-size: 16px;
+
+                @media screen and (max-width: 1279px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .contacts {
+            color: $text-color;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 16px;
+
+            h3 {
+                font-size: 24px;
+                margin: 0;
+
+                @media screen and (max-width: 1279px) {
+                    font-size: 18px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    font-size: 16px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                margin: 0;
+
+                @media screen and (max-width: 1279px) {
+                    font-size: 14px;
+                }
+
+                @media screen and (max-width: 767px) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
