@@ -1,0 +1,152 @@
+@use 'kit.scss' as *;
+
+.filter {
+    margin: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $bg-dark-color;
+    border-radius: 8px;
+    padding: 32px 64px;
+
+    @media screen and (max-width: 1279px) {
+        flex-direction: column;
+        padding: 24px 32px;
+        gap: 16px;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 8px;
+    }
+
+    .filter__item {
+        select {
+            width: 280px;
+            border-radius: 8px;
+            background-color: $bg-light-color;
+            border: none;
+            color: $text-color;
+            font-size: 16px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            padding: 14px 16px;
+            outline: none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            appearance:none;
+
+            background-image: url('../../assets/icons/arrow-down.svg');
+            background-repeat: no-repeat;
+            background-position: right 0.7rem top 50%;
+            background-size: 16px auto;
+
+            @media screen and (max-width: 1279px) {
+                width: 100%;                
+            }
+
+            @media screen and (max-width: 767px) {
+                font-size: 12px;
+                padding: 6px 8px;
+            }
+
+            option {
+                color: $text-color;
+                font-size: 16px;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 800;
+                cursor: pointer;
+
+                @media screen and (max-width: 767px) {
+                    font-size: 12px;
+                }
+
+                &:hover {
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    background-color: $bg-dark-color;
+    border-radius: 8px;
+    padding: 24px 0;
+    margin: 0 16px;
+    gap: 16px;
+
+    @media screen and (max-width: 1279px) {
+        padding: 8px 0;              
+    }
+
+    @media screen and (max-width: 767px) {
+        gap: 8px;
+    }
+
+    button {
+        border-radius: 8px;
+        background-color: $bg-light-color;
+        color: $text-color;
+        font-size: 24px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 800;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+
+        @media screen and (max-width: 1279px) {
+            padding: 4px 12px;
+        }
+    
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+
+        &.active {
+            color: $primary-color;
+        }
+
+        &:hover {
+            background-color: $primary-color;
+            color: $bg-light-color;
+        }
+    }
+}
+
+.grid {
+    border-radius: 8px;
+    background-color: $bg-dark-color;
+    padding: 32px;
+    margin: 0 16px;
+
+    @media screen and (max-width: 767px) {
+        padding: 8px 13px;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+
+        @media screen and (max-width: 1279px) {
+            gap: 18px;
+        }
+    
+        @media screen and (max-width: 767px) {
+            gap: 8px;
+        }
+    }
+}
+
+.no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    height: 50vh;
+    color: $text-color;
+}

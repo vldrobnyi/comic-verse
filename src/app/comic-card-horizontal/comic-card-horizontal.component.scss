@@ -1,5 +1,11 @@
 @use 'kit.scss' as *;
 
+:host {
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+}
+
 .comic-card-horizontal {
     display: flex;
     padding-right: 16px;
@@ -13,13 +19,14 @@
 
     @media screen and (max-width: 1279px) {
         gap: 32px;
-        max-width: 344px;
+        width: 344px;
         padding-right: 32px;
     }
 
     @media screen and (max-width: 767px) {
         gap: 45px;
-        max-width: 343px;
+        width: 100%;
+        max-width: unset;
         padding-right: 45px;
     }
 

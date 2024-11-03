@@ -1,0 +1,66 @@
+<section>
+    <div class="container">
+        <div class="filter">
+            <div class="filter__item">
+                <select name="publisher" id="publisher" [(ngModel)]="selectedPublisher" (change)="filterComics()">
+                    <option value="" disabled selected style="display: none;">Publisher</option>
+                    @if (selectedPublisher.length > 0) {
+                    <option value="">All</option>
+                    }
+                    @for(publisher of publishers; track $index){
+                    <option value="{{ publisher }}">{{ publisher }}</option>
+                    }
+                </select>
+            </div>
+            <div class="filter__item">
+                <select name="genre" id="genre" [(ngModel)]="selectedGenre" (change)="filterComics()">
+                    <option value="" disabled selected style="display: none;">Genre</option>
+                    @if (selectedGenre.length > 0) {
+                    <option value="">All</option>
+                    }
+                    @for(genre of genres; track $index){
+                    <option value="{{ genre }}">{{ genre }}</option>
+                    }
+                </select>
+            </div>
+            <div class="filter__item">
+                <select name="publisher" id="publisher" [(ngModel)]="date" (change)="filterComics()">
+                    <option value="" disabled selected style="display: none;">Date</option>
+                    <option value="Asc">Ascending</option>
+                    <option value="Desc">Descending</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        @if (comicsFiltered.length === 0) {
+        <div class="no-results">
+            <h2>No results found</h2>
+        </div>
+        }
+        @else {
+        <div class="grid">
+            <div class="cards">
+                @for(card of comicsFiltered; track $index) {
+                <app-comic-card [card]="card"></app-comic-card>
+                }
+            </div>
+        </div>
+        }
+    </div>
+</section>
+
+@if (showPagination) {
+    <section>
+        <div class="container">
+            <div class="pagination">
+                @for (p of pages; track $index) {
+                <button type="button" (click)="changePage(p)" class="{{p == page ? 'active' : ''}}">{{ p }}</button>
+                }
+            </div>
+        </div>
+    </section>
+}
