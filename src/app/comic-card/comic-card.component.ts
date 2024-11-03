@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ComicCard } from '../../models/comic-card.model';
 
 @Component({
   selector: 'app-comic-card',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './comic-card.component.scss'
 })
 export class ComicCardComponent {
-
+  @Input() card: ComicCard = new ComicCard();
 }

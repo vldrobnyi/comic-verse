@@ -1,0 +1,9 @@
+<section>
+    <div class="container">
+        <div class="cards">
+            @for(card of comicCards; track card.title) {
+                <app-comic-card [card]="card"></app-comic-card>
+            }
+        </div>
+    </div>
+</section>

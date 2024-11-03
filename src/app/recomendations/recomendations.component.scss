@@ -1,0 +1,21 @@
+section {
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 16px;
+
+        @media screen and (max-width: 1279px) {
+            & > :nth-child(n+6) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            & > :nth-child(n+4) {
+                display: none;
+            }
+        }
+    }
+}
+
