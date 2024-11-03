@@ -1,0 +1,75 @@
+@use 'kit.scss' as *;
+
+
+.content {
+    padding: 16px;
+    background-color: $bg-dark-color;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 0 16px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 767px) {
+        padding: 8px;
+    }
+
+    h2 {
+        color: $text-color;
+        margin: 16px;
+        font-size: 36px;
+
+        @media screen and (max-width: 1279px) {
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 18px;
+            margin: 8px;
+        }
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 16px;
+
+        @media screen and (max-width: 1279px) {
+            flex-direction: row;
+            gap: 16px;
+            flex-wrap: wrap;
+
+            & > :nth-child(n+5) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            flex-direction: row;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+
+            & > :nth-child(n+4) {
+                display: none;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        width: 100%;
+        padding: 14px 0;
+        text-align: center;
+        color: $text-color;
+        background-color: $bg-light-color;
+        border-radius: 8px;
+        font-size: 16px;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
