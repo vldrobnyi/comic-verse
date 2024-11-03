@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ComicCard } from '../../models/comic-card.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-comic-card',
@@ -10,4 +11,6 @@ import { ComicCard } from '../../models/comic-card.model';
 })
 export class ComicCardComponent {
   @Input() card: ComicCard = new ComicCard();
+
+  constructor(public router: Router) {}
 }
