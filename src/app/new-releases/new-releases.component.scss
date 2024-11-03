@@ -1,0 +1,37 @@
+@use 'kit.scss' as *;
+
+.content {
+    width: fit-content;
+    background-color: $bg-dark-color;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 880px;
+    margin: 0 16px;
+
+    h2 {
+        color: $text-color;
+        font-size: 36px;
+        margin: 16px;
+
+        @media screen and (max-width: 1279px) {
+            font-size: 24px;
+        }
+    
+        @media screen and (max-width: 767px) {
+            margin: 0px;
+            font-size: 18px;  
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media screen and (max-width: 767px) {
+            & > :nth-child(n + 7) {
+                display: none;
+            }
+        }
+    }
+}

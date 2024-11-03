@@ -1,3 +1,7 @@
-<app-nav-menu></app-nav-menu>
+@if (!router.url.includes('pdf-viewer')){
+    <app-nav-menu></app-nav-menu>
+}
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+@if (!router.url.includes('pdf-viewer')) {
+    <app-footer></app-footer>
+}
