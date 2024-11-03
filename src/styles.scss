@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'kit.scss' as *;
+
+body {
+    background-color: $bg-color;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    margin: 0;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+
+    @media screen and (max-width: 1279px) {
+        max-width: 768px;
+    }
+
+    @media screen and (max-width: 767px) {
+        max-width: 100%;
+    }
+}
