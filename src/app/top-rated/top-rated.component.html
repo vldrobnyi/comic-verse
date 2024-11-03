@@ -2,7 +2,7 @@
     <h2>Top Rated</h2>
     <div class="cards">
         @for(card of comicCards; track $index) {
-            <app-comic-card-horizontal></app-comic-card-horizontal>
+            <app-comic-card-horizontal [card]="card"></app-comic-card-horizontal>
         }
     </div>
     <a href="#">Browse catalogue</a>
